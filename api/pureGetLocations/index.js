@@ -23,7 +23,7 @@ module.exports = async function (context, req) {
         "mode": "cors",
         "credentials": "omit"
     });
-    const locationList = _locationList.json()
+    const locationList = await _locationList.json()
     context.res = {
         // status: 200, /* Defaults to 200 */
         body: locationList
